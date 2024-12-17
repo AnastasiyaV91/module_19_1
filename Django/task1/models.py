@@ -7,7 +7,7 @@ class Buyer(models.Model):                                          #  Моде�
 
     name = models.CharField(max_length=100)                         # Имя покупателя
     balance = models.DecimalField(max_digits=10, decimal_places=2)  # Баланс (10 цифр, 2 знака после запятой)
-    age = models.IntegerField()                                     # Возраст (Только целые числа)
+    age = models.PositiveIntegerField()                                     # Возраст (Только целые числа)
 
     def __str__(self):                       # Метод для строкового представления объекта
         return self.name                     # Возвращаем имя покупателя
